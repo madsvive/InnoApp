@@ -11,16 +11,16 @@
 angular.module('starter', ['ionic', 'starter.welcomeCtrl'])
 
 .run(function ($ionicPlatform) {
-  $ionicPlatform.ready(function () {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if (window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
+    $ionicPlatform.ready(function () {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if (window.StatusBar) {
+            StatusBar.styleDefault();
+        }
+    });
 })
 
 /*
@@ -29,13 +29,22 @@ This is our config where we define our states, so that vi kan control rendering 
 
 .config(function ($stateProvider, $urlRouterProvider) {
 
-  $stateProvider
+    $stateProvider
 
-  .state('welcome', {
-    url: '/welcome',
-    templateUrl: 'templates/welcome.html',
-    controller: 'welcomeCtrl'
-  })
+        .state('welcome', {
+            url: '/welcome',
+            templateUrl: 'templates/welcome.html',
+            controller: 'welcomeCtrl'
+        })
+        .state('loginInvestor', {
+            url: '/loginInvestor',
+            templateUrl: 'templates/loginInvestor.html'
+        })
 
-$urlRouterProvider.otherwise('/welcome')
+        .state('loginEnterprise', {
+            url: '/loginEnterprise',
+            templateUrl: 'templates/loginEnterprise.html'
+        })
+
+    $urlRouterProvider.otherwise('/welcome')
 })
