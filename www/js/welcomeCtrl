@@ -1,6 +1,0 @@
-angular.module('starter.welcomeCtrl')
-
-.controller('LoginCtrl', function($scope, $state){
-  $scope.welcome = function(){
-  }
-})

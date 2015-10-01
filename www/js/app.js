@@ -3,22 +3,30 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic','starter.welcomeCtrl'])
 
+//To tell we are using angular
+/*jslint white:true */
+/*global angular */
 
+angular.module('starter', ['ionic', 'starter.welcomeCtrl'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
+.run(function ($ionicPlatform) {
+  $ionicPlatform.ready(function () {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
+    if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
-    if(window.StatusBar) {
+    if (window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
 })
+
+/*
+This is our config where we define our states, so that vi kan control rendering and navigation
+ */
+
 .config(function ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -26,8 +34,8 @@ angular.module('starter', ['ionic','starter.welcomeCtrl'])
   .state('welcome', {
     url: '/welcome',
     templateUrl: 'templates/welcome.html',
-    controller:'welcomeCtrl'
+    controller: 'welcomeCtrl'
   })
 
-
+$urlRouterProvider.otherwise('/welcome')
 })
