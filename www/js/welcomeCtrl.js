@@ -5,7 +5,11 @@
 angular.module('starter.welcomeCtrl', [])
 
 .controller('welcomeCtrl', function ($scope, $state) {
-    $scope.welcome = function () {
-        $state.go('login')
+    $scope.welcomeInvestor = function () {
+        $state.go('loginInvestor')
+    }
+    
+    $scope.welcomeEnterprise = function () {   
+        $state.go('loginEnterprise')
     }
 })
