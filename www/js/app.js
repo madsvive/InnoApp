@@ -8,7 +8,7 @@
 /*jslint white:true */
 /*global angular */
 
-angular.module('starter', ['ionic', 'starter.welcomeCtrl'])
+angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -38,13 +38,23 @@ This is our config where we define our states, so that vi kan control rendering 
         })
         .state('loginInvestor', {
             url: '/loginInvestor',
-            templateUrl: 'templates/loginInvestor.html'
+            templateUrl: 'templates/loginInvestor.html',
+            controller: 'loginCtrl'
         })
-
         .state('loginEnterprise', {
             url: '/loginEnterprise',
-            templateUrl: 'templates/loginEnterprise.html'
+            templateUrl: 'templates/loginEnterprise.html',
+            controller: 'loginCtrl'
         })
-
+        .state('signupEnterprise', {
+            url: '/signupEnterprise',
+            templateUrl: 'templates/signupEnterprise.html',
+            controller: 'loginCtrl'
+        })
+        .state('signupInvestor', {
+            url: '/signupInvestor',
+            templateUrl: 'templates/signupInvestor.html',
+            controller: 'loginCtrl'
+        })
     $urlRouterProvider.otherwise('/welcome')
 })

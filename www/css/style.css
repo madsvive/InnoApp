@@ -1,7 +1,18 @@
 /* Empty. Add your own CSS if you like */
 
+
+/* Write: center in your image class to center your img horisontical*/
+
 img.center {
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+/* Sets all app background color*/ 
+.background,
+.background .pane,
+.background .item,
+.background .item-complex .item-content {
+    background-color: #FAFAFA;
 }
