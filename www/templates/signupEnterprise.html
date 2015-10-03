@@ -1,0 +1,26 @@
+<ion-view>
+    <ion-content>
+        <h4 class="padding text-center dark ion-briefcase">   New Enterprise</h4>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Company Name</span>
+                <input type="text" ng-model="EnterpriseName" placeholder="Funder A/S">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">CVR Number</span>
+                <input type="Number" ng-model="EnterpriseCvr" placeholder="XXXXXXXX">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="email" ng-model="EnterpriseEmail" placeholder="Akan@Funder.com">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="EnterprisePassword" placeholder="********">
+            </label>
+        </div>
+        <button class="button button-block button-positive">
+            Create Account
+        </button>
+    </ion-content>
+</ion-view>
