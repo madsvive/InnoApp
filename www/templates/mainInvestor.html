@@ -1,0 +1,75 @@
+<ion-side-menus>
+    <!-- Left menu -->
+    <ion-side-menu side="left">
+        <!-- Menu List-->
+        <div class="list">
+            <!-- List header (General)-->
+            <div class="item item-divider">General</div>
+            <!-- Clickable content of general list-->
+            <a class="item" href="#">Profile</a>
+            <a class="item" href="#">Settings</a>
+            <!-- List header (Categories)-->
+            <div class="item item-divider">Categories</div>
+            <!-- Clickable content of category list-->
+            <a class="item item-icon-right" href="#">
+                <i class="icon ion-pizza"></i>Food<span class="item-note">Restaurant, Café...</span>
+            </a>
+            <a class="item item-icon-right" href="#">
+                <i class="icon ion-monitor"></i>IT<span class="item-note">Web, Programming...</span>
+            </a>
+            <a class="item item-icon-right" href="#">
+                <i class="icon ion-chatbubbles"></i>Communication<span class="item-note">Tele...</span>
+            </a>
+            <a class="item item-icon-right" href="#">
+                <i class="icon ion-cash"></i>Finance<span class="item-note">Bank, Investment...</span>
+            </a>
+            <a class="item item-icon-right" href="#">
+                <i class="icon ion-steam"></i>Construction<span class="item-note">Entreprenuerial...</span>
+            </a>
+        </div>
+    </ion-side-menu>
+
+    <ion-side-menu-content scroll="true">
+        <!-- Main content, usually <ion-nav-view> -->
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        <!-- Here we determent the cards of the main page (needs to get repeated as many times as we have companies)-->
+        <div class="list card">
+
+            <div class="item item-avatar">
+                <!-- This should be the img/logo provided by the company-->
+                <img src="img/taxa-kobenhavn.png">
+                <!-- This is the name of the company and important info-->
+                <h2>Frederiksberg Taxa A/S</h2>
+                <p>- Søger 200.000 kr. for 10%</p>
+                <p>- Omsætning 600.000 pr. år</p>
+                <p>- 2 medarbejdere</p>
+            </div>
+
+            <div class="item item-body">
+                <!-- This could be the presentation video from the company-->
+                <img class="full-image" src="img/delorean.jpg">
+                <p>
+                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item, the content is from a card-body consisting of an image and paragraph text. The footer consists of tabs, icons aligned left, within the card-footer.
+                </p>
+                <p>
+                    <a href="#" class="subdued">12.500/200.000</a>
+                    <a href="#" class="subdued">5 Comments</a>
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-thumbsup"></i> Like
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-chatbox"></i> Comment
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i> Share
+                </a>
+            </div>
+
+        </div>
+    </ion-side-menu-content>
+
+</ion-side-menus>

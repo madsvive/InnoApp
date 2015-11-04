@@ -8,7 +8,7 @@
 /*jslint white:true */
 /*global angular */
 
-angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl'])
+angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'starter.loginCtrl' /*',starter.signupCtrl'*/])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -56,5 +56,18 @@ This is our config where we define our states, so that vi kan control rendering 
             templateUrl: 'templates/signupInvestor.html',
             controller: 'loginCtrl'
         })
+        .state('mainInvestor', {
+            url: '/mainInvestor',
+            templateUrl: 'templates/mainInvestor.html',
+        })
     $urlRouterProvider.otherwise('/welcome')
 })
+
+/*
+This is for the sidemenu to function
+*/
+function ContentController($scope, $ionicSideMenuDelegate) {
+    $scope.toggleLeft = function () {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
+}

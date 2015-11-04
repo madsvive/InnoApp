@@ -1,3 +1,7 @@
+//To tell we are using angular
+/*jslint white:true */
+/*global angular */
+
 angular.module('starter.signupCtrl', [])
 
 //Firebase code to create a user
@@ -13,15 +17,3 @@ ref.createUser({
   }
 });
 
-//Firebase code to login a user
-var ref = new Firebase("https://innoappxb02.firebaseio.com");
-ref.authWithPassword({
-  email    : "bobtony@firebase.com",
-  password : "correcthorsebatterystaple"
-}, function(error, authData) {
-  if (error) {
-    console.log("Login Failed!", error);
-  } else {
-    console.log("Authenticated successfully with payload:", authData);
-  }
-});

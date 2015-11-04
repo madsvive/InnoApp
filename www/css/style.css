@@ -9,10 +9,46 @@ img.center {
     margin-right: auto
 }
 
-/* Sets all app background color*/ 
+
+/* Sets all app background color (.background .item is commentet out to avoid override of sidemenu item-dividers)*/
+
 .background,
 .background .pane,
-.background .item,
+/*.background .item,*/
 .background .item-complex .item-content {
     background-color: #FAFAFA;
+}
+
+
+/* Sets the settings of the welcomescreen spinner*/
+
+.spinner svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    height: 90px;
+    /*  stroke: #444;
+  fill: #444; */
+}
+
+
+/* Sets the videocontainer to be responsive (make a <div> with the class="video-container" and the ninclude your video in a <iframe> with the attributes <iframe src="source.....") frameborder="0" width="560" height="315"></iframe> */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

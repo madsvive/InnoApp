@@ -12,14 +12,14 @@
             </label>
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Email</span>
-                <input type="email" ng-model="EnterpriseEmail" placeholder="Akan@Funder.com">
+                <input type="email" ng-model="email" placeholder="Akan@Funder.com">
             </label>
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Password</span>
-                <input type="password" ng-model="EnterprisePassword" placeholder="********">
+                <input type="password" ng-model="password" placeholder="********">
             </label>
         </div>
-        <button class="button button-block button-positive">
+        <button ng-click="createUser()" class="button button-block button-positive">
             Create Account
         </button>
     </ion-content>
