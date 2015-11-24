@@ -38,22 +38,21 @@
 
 
             <!-- Here we determent the cards of the main page (needs to get repeated as many times as we have companies)-->
-            <div class="list card" scroll="true" ng-controller="item in companyList">
+            <div class="list card" scroll="true" ng-repeat="thing in listOfStuff | lookup:query">
 
                 <div class="item item-avatar">
                     <!-- This should be the img/logo provided by the company-->
-                    <img src="img/taxa-kobenhavn.png">
+                    <img src="{{thing.logo}}">
                     <!-- This is the name of the company and important info-->
-                    <h2><!--{{item.name}}-->Taxa A/S</h2>
-                    <p>- Transport</p>
-                    <p>- Premium</p>
+                    <h2>{{thing.name}}</h2>
+                    <p>{{thing.category}}</p>
+                    <p>{{thing.subscription}}</p>
                 </div>
 
                 <div class="item item-body">
                     <!-- This could be the presentation video from the company-->
-                    <img class="full-image" src="img/delorean.jpg">
                     <p>
-                        This is a "Facebook" styled Card. The header is created from a Thumbnail List item, the content is from a card-body consisting of an image and paragraph text. The footer consists of tabs, icons aligned left, within the card-footer.
+                        {{thing.shortsummary}}
                     </p>
                     <p>
                         <a href="#" class="subdued">12.500/200.000</a>
@@ -63,11 +62,13 @@
 
                 <div class="item tabs tabs-secondary tabs-icon-left">
                     <a class="tab-item" href="#">
-                        <i class="icon ion-thumbsup"></i> Like
+                        <i class="icon ion-thumbsup"></i> Følg
                     </a>
+<!--
                     <a class="tab-item" href="#">
                         <i class="icon ion-chatbox"></i> Comment
                     </a>
+-->
                     <a class="tab-item" href="#">
                         <i class="icon ion-share"></i> Share
                     </a>

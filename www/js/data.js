@@ -9,10 +9,10 @@ angular.module('starter.data', [])
     var companyList = [
         {
             name: "Taxa fyn A/S",
-            logo: "/img/test.png",
+            logo: "img/taxa.png",
             category: "Transport",
             subscription: "free",
-            shortssummary: "...",
+            shortsummary: "...",
             longsummary: ".......",
             follow: 4,
             funding: "200.000 for 20%",
@@ -25,10 +25,10 @@ angular.module('starter.data', [])
         },
         {
             name: "123 Opstart A/S ",
-            logo: "/img/test.png",
+            logo: "img/consult.jpg",
             category: "Consulting",
             subscription: "Premium",
-            shortssummary: "...",
+            shortsummary: "...",
             longsummary: ".......",
             follow: 0,
             funding: "200.000 for 5%",
@@ -40,10 +40,10 @@ angular.module('starter.data', [])
             linkedin: "linkedin.com/mads.vive"
         }, {
             name: "Habibib Café",
-            logo: "/img/test.png",
+            logo: "img/Cafe.jpg",
             category: "Food",
             subscription: "Premium",
-            shortssummary: "...",
+            shortsummary: "...",
             longsummary: ".......",
             follow: 7,
             funding: "200.000 for 5%",
@@ -54,11 +54,11 @@ angular.module('starter.data', [])
             facebook: "facebook.com/mads.vive",
             linkedin: "linkedin.com/mads.vive"
         }, {
-            name: "AG Web Design",
-            logo: "/img/test.png",
+            name: "AG Solutions",
+            logo: "img/ag.jpg",
             category: "IT",
             subscription: "Certified",
-            shortssummary: "...",
+            shortsummary: "...",
             longsummary: ".......",
             follow: 2,
             funding: "200.000 for 5%",
@@ -69,11 +69,11 @@ angular.module('starter.data', [])
             facebook: "facebook.com/mads.vive",
             linkedin: "linkedin.com/mads.vive"
         }, {
-            name: "Gülsen invest",
-            logo: "/img/test.png",
-            category: "Finance",
-            subscription: "KU",
-            shortssummary: "...",
+            name: "Angellist",
+            logo: "img/angellist.png",
+            category: "Crowdinvestment",
+            subscription: "CBS Certified",
+            shortsummary: "...",
             longsummary: ".......",
             follow: 4,
             funding: "200.000 for 5%",

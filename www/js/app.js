@@ -58,16 +58,16 @@ This is our config where we define our states, so that vi kan control rendering 
         })
         .state('mainInvestor', {
             url: '/mainInvestor',
-            abstract: 'true',
+//            abstract: 'true',
             templateUrl: 'templates/mainInvestor.html',
             controller: 'CompanyCtrl'
         })
-        .state('mainInvestor', {
-            url: '/mainInvestor',
-            abstract: 'true',
-            templateUrl: 'templates/mainInvestor.html',
-            controller: 'CompanyCtrl'
-        })
+//        .state('company', {
+//            url: '/company',
+//            abstract: 'true',
+//            templateUrl: 'templates/mainInvestor.html',
+//            controller: 'CompanyCtrl'
+//        })
     $urlRouterProvider.otherwise('/welcome')
 })
 
