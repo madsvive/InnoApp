@@ -15,7 +15,7 @@ img.center {
 .background,
 .background .pane,
 /*.background .item,*/
-.background .item-complex .item-content {
+.background .item-complex /*.item-content*/ {
     background-color: #FAFAFA;
 }
 
