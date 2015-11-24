@@ -30,20 +30,23 @@
     </ion-side-menu>
 
     <ion-side-menu-content scroll="true">
+        <ion-header-bar align-title="left" class="bar-stable">
+            <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        </ion-header-bar>
         <!-- Main content, usually <ion-nav-view> -->
         <ion-content>
-            <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+
             <!-- Here we determent the cards of the main page (needs to get repeated as many times as we have companies)-->
-            <div class="list card" scroll="true">
+            <div class="list card" scroll="true" ng-controller="item in companyList">
 
                 <div class="item item-avatar">
                     <!-- This should be the img/logo provided by the company-->
                     <img src="img/taxa-kobenhavn.png">
                     <!-- This is the name of the company and important info-->
-                    <h2>Frederiksberg Taxa A/S</h2>
-                    <p>- Søger 200.000 kr. for 10%</p>
-                    <p>- Omsætning 600.000 pr. år</p>
-                    <p>- 2 medarbejdere</p>
+                    <h2><!--{{item.name}}-->Taxa A/S</h2>
+                    <p>- Transport</p>
+                    <p>- Premium</p>
                 </div>
 
                 <div class="item item-body">

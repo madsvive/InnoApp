@@ -1,6 +1,7 @@
 {
     "jscodehints.detectedExclusions": [
         "C:/Users/Mads/AndroidStudioProjects/InnoApp/www/js/app.js",
-        "C:/Users/Mads/AndroidStudioProjects/InnoApp/www/js/welcomeCtrl.js"
+        "C:/Users/Mads/AndroidStudioProjects/InnoApp/www/js/welcomeCtrl.js",
+        "C:/Users/Mads/AndroidStudioProjects/InnoApp/www/js/data.js"
     ]
 }
