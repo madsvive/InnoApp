@@ -7,19 +7,19 @@ angular.module('starter.mainInvCtrl', [])
 .controller('mainInvCtrl', function ($scope, $state) {
 
             $scope.card = function (id) {
-                $scope.state = 0;
+                $scope.companyState = 0;
                 var akan = id;
 
                 if (akan === 1) {
-                    $scope.state = 1;
+                    $scope.companyState = 1;
                     $state.go('companyPage')
                 }
                 if (akan === 2) {
-                    $scope.state = 2;
+                    $scope.companyState = 2;
                     $state.go('companyPage')
                 }
                 if (akan === 3) {
-                    $scope.state = 3;
+                    $scope.companyState = 3;
                     $state.go('companyPage')
                 }
                 if (akan === 4) {
