@@ -8,7 +8,7 @@
 /*jslint white:true */
 /*global angular */
 
-angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data' /*,'starter.signupCtrl'*/ ])
+angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data', 'starter.mainInvCtrl' /*,'starter.signupCtrl'*/ ])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -58,16 +58,15 @@ This is our config where we define our states, so that vi kan control rendering 
         })
         .state('mainInvestor', {
             url: '/mainInvestor',
-//            abstract: 'true',
             templateUrl: 'templates/mainInvestor.html',
             controller: 'CompanyCtrl'
         })
-//        .state('company', {
-//            url: '/company',
-//            abstract: 'true',
-//            templateUrl: 'templates/mainInvestor.html',
-//            controller: 'CompanyCtrl'
-//        })
+        .state('company1', {
+            url: '/company1',
+            templateUrl: 'templates/companies/company1.html',
+            controller: 'mainInvCtrl'
+        })
+   
     $urlRouterProvider.otherwise('/welcome')
 })
 

@@ -31,14 +31,17 @@
 
     <ion-side-menu-content scroll="true">
         <!-- Navigation header with menu and search-->
-        <ion-header-bar align-title="left" class="bar-stable">
+        <ion-header-bar class="bar-stable">
             <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-
-
+             <div class="title">Companies</div>
+            
+        <!-- Search-->
+<!--
             <label class="item-input-wrapper">
                 <i class="icon ion-search placeholder-icon"></i>
                 <input type="search" placeholder="Search" ng-model="query">
             </label>
+-->
         </ion-header-bar>
         <!-- Main content, usually <ion-nav-view> -->
         <ion-content>
@@ -46,7 +49,7 @@
             <!-- Here we determent the cards of the main page (needs to get repeated as many times as we have companies)-->
             <div class="list card" scroll="true" ng-repeat="thing in listOfStuff | lookup:query">
 
-                <div class="item item-avatar">
+                <div ng-controller="mainInvCtrl" ng-click="card(thing.id)" class="item item-avatar">
                     <!-- This should be the img/logo provided by the company-->
                     <img src="{{thing.logo}}">
                     <!-- This is the name of the company and important info-->

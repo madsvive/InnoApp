@@ -10,6 +10,7 @@ angular.module('starter.data', [])
 
     var companyList = [
         {
+            id: 1,
             name: "AG Solutions",
             logo: "img/ag.jpg",
             category: "IT",
@@ -24,8 +25,9 @@ angular.module('starter.data', [])
             budget: /budgets/,
             url: "http://www.virksomhed.dk/",
             facebook: "facebook.com/mads.vive",
-            linkedin: "linkedin.com/mads.vive"
+            linkedin: "linkedin.com/mads.vive",
         }, {
+            id: 2,
             name: "Taxa fyn A/S",
             logo: "img/taxa.png",
             category: "Transport",
@@ -43,7 +45,8 @@ angular.module('starter.data', [])
             linkedin: "linkedin.com/mads.vive/"
         },
         {
-            name: "123 Opstart A/S ",
+            id: 3,
+            name: "123 Opstart A/S",
             logo: "img/consult.jpg",
             category: "Consulting",
             subscription: "Premium",
@@ -59,6 +62,7 @@ angular.module('starter.data', [])
             facebook: "facebook.com/mads.vive",
             linkedin: "linkedin.com/mads.vive"
         }, {
+            id: 4,
             name: "Habibib Café",
             logo: "img/Cafe.jpg",
             category: "Food",
@@ -75,6 +79,7 @@ angular.module('starter.data', [])
             facebook: "facebook.com/mads.vive",
             linkedin: "linkedin.com/mads.vive"
         }, {
+            id: 5,
             name: "Angellist",
             logo: "img/angellist.png",
             category: "Crowdinvestment",
