@@ -1,89 +1,91 @@
-<ion-side-menus>
-    <!-- Left menu -->
-    <ion-side-menu side="left">
-        <!-- Menu List-->
-        <div class="list">
-            <!-- List header (General)-->
-            <div class="item item-divider">General</div>
-            <!-- Clickable content of general list-->
-            <a class="item" href="#">Profile</a>
-            <a class="item" href="#">Settings</a>
-            <!-- List header (Categories)-->
-            <div class="item item-divider">Categories</div>
-            <!-- Clickable content of category list-->
-            <a class="item item-icon-right" href="#">
-                <i class="icon ion-pizza"></i>Food<span class="item-note">Restaurant, Café...</span>
-            </a>
-            <a class="item item-icon-right" href="#">
-                <i class="icon ion-monitor"></i>IT<span class="item-note">Web, Programming...</span>
-            </a>
-            <a class="item item-icon-right" href="#">
-                <i class="icon ion-chatbubbles"></i>Communication<span class="item-note">Tele...</span>
-            </a>
-            <a class="item item-icon-right" href="#">
-                <i class="icon ion-cash"></i>Finance<span class="item-note">Bank, Investment...</span>
-            </a>
-            <a class="item item-icon-right" href="#">
-                <i class="icon ion-steam"></i>Construction<span class="item-note">Entreprenuerial...</span>
-            </a>
-        </div>
-    </ion-side-menu>
+<ion-view>
+    <ion-side-menus>
+        <!-- Left menu -->
+        <ion-side-menu side="left">
+            <!-- Menu List-->
+            <div class="list">
+                <!-- List header (General)-->
+                <div class="item item-divider">General</div>
+                <!-- Clickable content of general list-->
+                <a class="item" href="#">Profile</a>
+                <a class="item" href="#">Settings</a>
+                <!-- List header (Categories)-->
+                <div class="item item-divider">Categories</div>
+                <!-- Clickable content of category list-->
+                <a class="item item-icon-right" href="#">
+                    <i class="icon ion-pizza"></i>Food<span class="item-note">Restaurant, Café...</span>
+                </a>
+                <a class="item item-icon-right" href="#">
+                    <i class="icon ion-monitor"></i>IT<span class="item-note">Web, Programming...</span>
+                </a>
+                <a class="item item-icon-right" href="#">
+                    <i class="icon ion-chatbubbles"></i>Communication<span class="item-note">Tele...</span>
+                </a>
+                <a class="item item-icon-right" href="#">
+                    <i class="icon ion-cash"></i>Finance<span class="item-note">Bank, Investment...</span>
+                </a>
+                <a class="item item-icon-right" href="#">
+                    <i class="icon ion-steam"></i>Construction<span class="item-note">Entreprenuerial...</span>
+                </a>
+            </div>
+        </ion-side-menu>
 
-    <ion-side-menu-content scroll="true">
-        <!-- Navigation header with menu and search-->
-        <ion-header-bar class="bar-stable">
-            <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-             <div class="title">Companies</div>
-            
-        <!-- Search-->
-<!--
+        <ion-side-menu-content scroll="true">
+            <!-- Navigation header with menu and search-->
+            <ion-header-bar class="bar-stable">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+                <div class="title">Companies</div>
+
+                <!-- Search-->
+                <!--
             <label class="item-input-wrapper">
                 <i class="icon ion-search placeholder-icon"></i>
                 <input type="search" placeholder="Search" ng-model="query">
             </label>
 -->
-        </ion-header-bar>
-        <!-- Main content, usually <ion-nav-view> -->
-        <ion-content>
+            </ion-header-bar>
+            <!-- Main content, usually <ion-nav-view> -->
+            <ion-content>
 
-            <!-- Here we determent the cards of the main page (needs to get repeated as many times as we have companies)-->
-            <div class="list card" scroll="true" ng-repeat="thing in listOfStuff | lookup:query">
+                <!-- Here we determent the cards of the main page (needs to get repeated as many times as we have companies)-->
+                <div class="list card" scroll="true" ng-repeat="thing in listOfStuff | lookup:query">
 
-                <div ng-controller="mainInvCtrl" ng-click="card(thing.id)" class="item item-avatar">
-                    <!-- This should be the img/logo provided by the company-->
-                    <img src="{{thing.logo}}">
-                    <!-- This is the name of the company and important info-->
-                    <h2>{{thing.name}}</h2>
-                    <p>Category: {{thing.category}}</p>
-                    <p>Subsciption: {{thing.subscription}}</p>
-                </div>
+                    <div ng-controller="mainInvCtrl" ng-click="card(thing.id)" class="item item-avatar">
+                        <!-- This should be the img/logo provided by the company-->
+                        <img src="{{thing.logo}}">
+                        <!-- This is the name of the company and important info-->
+                        <h2>{{thing.name}}</h2>
+                        <p>Category: {{thing.category}}</p>
+                        <p>Subsciption: {{thing.subscription}}</p>
+                    </div>
 
-                <div class="item item-body">
-                    <!-- This could be the presentation video from the company-->
-                    <p>
-                        {{thing.shortsummary}}
-                    </p>
-                    <p>
-                        <a href="#" class="subdued">Funding: {{thing.goal}}</a>
-                    </p>
-                </div>
+                    <div class="item item-body">
+                        <!-- This could be the presentation video from the company-->
+                        <p>
+                            {{thing.shortsummary}}
+                        </p>
+                        <p>
+                            <a href="#" class="subdued">Funding: {{thing.goal}}</a>
+                        </p>
+                    </div>
 
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item" href="#">
-                        <i class="icon ion-thumbsup"></i> Følg
-                    </a>
-                    <!--
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item" href="#">
+                            <i class="icon ion-thumbsup"></i> Følg
+                        </a>
+                        <!--
                     <a class="tab-item" href="#">
                         <i class="icon ion-chatbox"></i> Comment
                     </a>
 -->
-                    <a class="tab-item" href="#">
-                        <i class="icon ion-share"></i> Del
-                    </a>
+                        <a class="tab-item" href="#">
+                            <i class="icon ion-share"></i> Del
+                        </a>
+                    </div>
+
                 </div>
+            </ion-content>
+        </ion-side-menu-content>
 
-            </div>
-        </ion-content>
-    </ion-side-menu-content>
-
-</ion-side-menus>
+    </ion-side-menus>
+</ion-view>
