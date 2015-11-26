@@ -9,26 +9,26 @@ angular.module('starter.mainInvCtrl', [])
             $scope.card = function (id) {
                 $scope.state = 0;
                 var akan = id;
-                
+
                 if (akan === 1) {
                     $scope.state = 1;
-                    $state.go('company1')
+                    $state.go('companyPage')
                 }
                 if (akan === 2) {
                     $scope.state = 2;
-                    $state.go('company2')
+                    $state.go('companyPage')
                 }
                 if (akan === 3) {
                     $scope.state = 3;
-                    $state.go('company3')
+                    $state.go('companyPage')
                 }
                 if (akan === 4) {
                     $scope.state = 4;
-                    $state.go('company4')
+                    $state.go('companyPage')
                 }
                 if (akan === 5) {
                     $scope.state = 5;
-                    $state.go('company5')
+                    $state.go('companyPage')
                 }
                 else {
                 console.log("Lortet virker ikke")

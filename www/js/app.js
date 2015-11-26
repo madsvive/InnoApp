@@ -61,12 +61,12 @@ This is our config where we define our states, so that vi kan control rendering 
             templateUrl: 'templates/mainInvestor.html',
             controller: 'CompanyCtrl'
         })
-        .state('company1', {
-            url: '/company1',
-            templateUrl: 'templates/companies/company1.html',
-            controller: 'mainInvCtrl'
+        .state('companyPage', {
+            url: '/companyPage',
+            templateUrl: 'templates/companies/companyPage.html',
+            controller: 'CompanyCtrl'
         })
-   
+
     $urlRouterProvider.otherwise('/welcome')
 })
 
