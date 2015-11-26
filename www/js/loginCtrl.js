@@ -7,7 +7,7 @@ angular.module('starter.loginCtrl', [])
 .controller('loginCtrl', function ($scope, $state) {
     $scope.loginInvestor = function () {
         //Her skal login for investorer verificeres og state'en som man så skal sendes til er virksomhedsoversigten
-       
+
         //Firebase code to login a user
         //var ref = new Firebase("https://innoappxb02.firebaseio.com");
         //ref.authWithPassword({
@@ -24,8 +24,8 @@ angular.module('starter.loginCtrl', [])
     }
 
     $scope.loginEnterprise = function () {
-        //Her skal login for enterprise verificeres og state'en som man så skal sendes til er ?virksomhedsprofilen? 
-        $state.go('xx')
+        //Her skal login for enterprise verificeres og state'en som man så skal sendes til er ?virksomhedsprofilen?
+        $state.go('mainCompany')
     }
 
     $scope.signupEnterprise = function () {
