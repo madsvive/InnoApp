@@ -59,17 +59,17 @@ angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'star
         .state('mainInvestor', {
             url: '/mainInvestor',
             templateUrl: 'templates/mainInvestor.html',
-            controller: 'CompanyCtrl'
+            controller: 'mainInvCtrl'
         })
         .state('companyPage', {
             url: '/companyPage',
             templateUrl: 'templates/companyPage.html',
-            controller: 'CompanyCtrl'
+            controller: 'mainInvCtrl'
         })
         .state('mainCompany', {
             url: '/mainCompany',
             templateUrl: 'templates/mainCompany.html',
-            controller: 'chatCtrl'
+            controller: 'loginCtrl'
         })
         .state('company1', {
             url: '/company1',
