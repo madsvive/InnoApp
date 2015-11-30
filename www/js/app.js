@@ -8,79 +8,109 @@
 /*jslint white:true */
 /*global angular */
 
-angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data', 'starter.mainInvCtrl' /*,'starter.signupCtrl'*/])
+angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data', 'starter.mainInvCtrl' /*,'starter.signupCtrl'*/ ])
 
-  .run(function ($ionicPlatform) {
+.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      if (window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      }
-      if (window.StatusBar) {
-        StatusBar.styleDefault();
-      }
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if (window.StatusBar) {
+            StatusBar.styleDefault();
+        }
     });
-  })
+})
 
-  /*
-   This is our config where we define our states, so that vi kan control rendering and navigation
-   */
+/*
+ This is our config where we define our states, so that vi kan control rendering and navigation
+ */
 
-  .config(function ($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
 
-      .state('welcome', {
-        url: '/welcome',
-        templateUrl: 'templates/welcome.html',
-        controller: 'welcomeCtrl'
-      })
-      .state('loginInvestor', {
-        url: '/loginInvestor',
-        templateUrl: 'templates/loginInvestor.html',
-        controller: 'loginCtrl'
-      })
-      .state('loginEnterprise', {
-        url: '/loginEnterprise',
-        templateUrl: 'templates/loginEnterprise.html',
-        controller: 'loginCtrl'
-      })
-      .state('signupEnterprise', {
-        url: '/signupEnterprise',
-        templateUrl: 'templates/signupEnterprise.html',
-        controller: 'loginCtrl'
-      })
-      .state('signupInvestor', {
-        url: '/signupInvestor',
-        templateUrl: 'templates/signupInvestor.html',
-        controller: 'loginCtrl'
-      })
-      .state('mainInvestor', {
-        url: '/mainInvestor',
-        templateUrl: 'templates/mainInvestor.html',
-        controller: 'CompanyCtrl'
-      })
-      .state('companyPage', {
-        url: '/companyPage',
-        templateUrl: 'templates/companyPage.html',
-        controller: 'CompanyCtrl'
-      })
-      .state('mainCompany', {
-        url: '/mainCompany',
-        templateUrl: 'templates/mainCompany.html',
-        controller: 'loginCtrl'
-      })
+        .state('welcome', {
+            url: '/welcome',
+            templateUrl: 'templates/welcome.html',
+            controller: 'welcomeCtrl'
+        })
+        .state('loginInvestor', {
+            url: '/loginInvestor',
+            templateUrl: 'templates/loginInvestor.html',
+            controller: 'loginCtrl'
+        })
+        .state('loginEnterprise', {
+            url: '/loginEnterprise',
+            templateUrl: 'templates/loginEnterprise.html',
+            controller: 'loginCtrl'
+        })
+        .state('signupEnterprise', {
+            url: '/signupEnterprise',
+            templateUrl: 'templates/signupEnterprise.html',
+            controller: 'loginCtrl'
+        })
+        .state('signupInvestor', {
+            url: '/signupInvestor',
+            templateUrl: 'templates/signupInvestor.html',
+            controller: 'loginCtrl'
+        })
+        .state('mainInvestor', {
+            url: '/mainInvestor',
+            templateUrl: 'templates/mainInvestor.html',
+            controller: 'CompanyCtrl'
+        })
+        .state('companyPage', {
+            url: '/companyPage',
+            templateUrl: 'templates/companyPage.html',
+            controller: 'CompanyCtrl'
+        })
+        .state('mainCompany', {
+            url: '/mainCompany',
+            templateUrl: 'templates/mainCompany.html',
+            controller: 'loginCtrl'
+        })
 
+    /*Start of controllers for Hardcoded datapages, is to be changed before rollout*/
+    .state('company1', {
+        url: '/company1',
+        templateUrl: 'templates/company&investor/company1.html'
+    })
+
+    .state('company2', {
+        url: '/company2',
+        templateUrl: 'templates/company&investor/company2.html'
+    })
+
+    .state('company3', {
+            url: '/company3',
+            templateUrl: 'templates/company&investor/company3.html'
+
+        })
+        .state('investor1', {
+            url: '/investor1',
+            templateUrl: 'templates/company&investor/investor1.html'
+        })
+
+    .state('investor2', {
+        url: '/investor2',
+        templateUrl: 'templates/company&investor/investor2.html'
+    })
+
+    .state('investor3', {
+        url: '/investor3',
+        templateUrl: 'templates/company&investor/investor3.html'
+    })
 
     $urlRouterProvider.otherwise('/welcome')
-  })
+})
 
 /*
  This is for the sidemenu to function
  */
 function ContentController($scope, $ionicSideMenuDelegate) {
-  $scope.toggleLeft = function () {
-    $ionicSideMenuDelegate.toggleLeft();
-  };
+    $scope.toggleLeft = function () {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
 }
