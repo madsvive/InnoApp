@@ -12,15 +12,15 @@ angular.module('starter.mainInvCtrl', [])
 
                 if (akan === 1) {
                     $scope.companyState = 1;
-                    $state.go('companyPage')
+                    $state.go('company1')
                 }
                 if (akan === 2) {
                     $scope.companyState = 2;
-                    $state.go('companyPage')
+                    $state.go('company2')
                 }
                 if (akan === 3) {
                     $scope.companyState = 3;
-                    $state.go('companyPage')
+                    $state.go('company3')
                 }
                 if (akan === 4) {
                     $scope.state = 4;
@@ -31,7 +31,13 @@ angular.module('starter.mainInvCtrl', [])
                     $state.go('companyPage')
                 }
                 else {
-                console.log("Lortet virker ikke")
+                console.log("controlleren mainInvestor virker ikke")
                 }
             }
+})
+.controller('chatCtrl', function ($scope, $state) {
+
+            $scope.chat = function () {
+                    $state.go('UserMessages')
+                }
 })
