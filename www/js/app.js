@@ -69,7 +69,7 @@ angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'star
         .state('mainCompany', {
             url: '/mainCompany',
             templateUrl: 'templates/mainCompany.html',
-            controller: 'loginCtrl'
+            controller: 'chatCtrl'
         })
         .state('company1', {
             url: '/company1',
