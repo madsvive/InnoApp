@@ -8,7 +8,11 @@
 /*jslint white:true */
 /*global angular */
 
-angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data', 'starter.mainInvCtrl', 'monospaced.elastic', 'angularMoment' /*,'starter.signupCtrl'*/ ])
+angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data', 'starter.mainInvCtrl', 'monospaced.elastic', 'angularMoment'])  
+
+/*udvidelsesmuligheder til senere*/
+/*,'starter.signupCtrl'*/ 
+/*'Firebase',*/
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -44,12 +48,12 @@ angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'star
         .state('loginEnterprise', {
             url: '/loginEnterprise',
             templateUrl: 'templates/loginEnterprise.html',
-            controller: 'loginCtrl'
+            controller: 'loginCtrl2'
         })
         .state('signupEnterprise', {
             url: '/signupEnterprise',
             templateUrl: 'templates/signupEnterprise.html',
-            controller: 'loginCtrl'
+            controller: 'loginCtrl2'
         })
         .state('signupInvestor', {
             url: '/signupInvestor',
@@ -104,6 +108,7 @@ angular.module('starter', ['ionic', /*'Firebase',*/ 'starter.welcomeCtrl', 'star
 
     $urlRouterProvider.otherwise('/welcome')
 })
+
 
 /*This is for the chat*/
 .controller('UserMessagesCtrl', ['$scope', '$rootScope', '$state',

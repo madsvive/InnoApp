@@ -23,6 +23,12 @@ angular.module('starter.loginCtrl', [])
         $state.go('mainInvestor')
     }
 
+    $scope.signupInvestor = function () {
+        $state.go('signupInvestor')
+    }
+})
+
+.controller('loginCtrl2', function ($scope, $state) {
     $scope.loginEnterprise = function () {
         //Her skal login for enterprise verificeres og state'en som man så skal sendes til er ?virksomhedsprofilen?
         $state.go('mainCompany')
@@ -32,7 +38,4 @@ angular.module('starter.loginCtrl', [])
         $state.go('signupEnterprise')
     }
 
-    $scope.signupInvestor = function () {
-        $state.go('signupInvestor')
-    }
 })
