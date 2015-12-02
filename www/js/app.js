@@ -8,10 +8,10 @@
 /*jslint white:true */
 /*global angular */
 
-angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data', 'starter.mainInvCtrl', 'monospaced.elastic', 'angularMoment'])  
+angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 'starter.data', 'starter.mainInvCtrl', 'monospaced.elastic', 'angularMoment'])
 
 /*udvidelsesmuligheder til senere*/
-/*,'starter.signupCtrl'*/ 
+/*,'starter.signupCtrl'*/
 /*'Firebase',*/
 
 .run(function ($ionicPlatform) {
@@ -38,72 +38,87 @@ angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 
         .state('welcome', {
             url: '/welcome',
             templateUrl: 'templates/welcome.html',
-            controller: 'welcomeCtrl'
+            controller: 'welcomeCtrl',
+          cache: false
         })
         .state('loginInvestor', {
             url: '/loginInvestor',
             templateUrl: 'templates/loginInvestor.html',
-            controller: 'loginCtrl'
+            controller: 'loginCtrl',
+          cache: false
         })
         .state('loginEnterprise', {
             url: '/loginEnterprise',
             templateUrl: 'templates/loginEnterprise.html',
-            controller: 'loginCtrl2'
+            controller: 'loginCtrl2',
+          cache: false
         })
         .state('signupEnterprise', {
             url: '/signupEnterprise',
             templateUrl: 'templates/signupEnterprise.html',
-            controller: 'loginCtrl2'
+            controller: 'loginCtrl2',
+          cache: false
         })
         .state('signupInvestor', {
             url: '/signupInvestor',
             templateUrl: 'templates/signupInvestor.html',
-            controller: 'loginCtrl'
+            controller: 'loginCtrl',
+          cache: false
         })
         .state('mainInvestor', {
             url: '/mainInvestor',
             templateUrl: 'templates/mainInvestor.html',
-            controller: 'CompanyCtrl'
+            controller: 'CompanyCtrl',
+          cache: false
         })
         .state('companyPage', {
             url: '/companyPage',
             templateUrl: 'templates/companyPage.html',
-            controller: 'mainInvCtrl'
+            controller: 'mainInvCtrl',
+          cache: false
         })
         .state('mainCompany', {
             url: '/mainCompany',
             templateUrl: 'templates/mainCompany.html',
-            controller: 'chatCtrl'
+            controller: 'chatCtrl',
+          cache: false
         })
         .state('company1', {
             url: '/company1',
-            templateUrl: 'templates/company&investor/company1.html'
+            templateUrl: 'templates/company&investor/company1.html',
+          cache: false
         })
         .state('company2', {
             url: '/company2',
-            templateUrl: 'templates/company&investor/company2.html'
+            templateUrl: 'templates/company&investor/company2.html',
+          cache: false
         })
         .state('company3', {
             url: '/company3',
-            templateUrl: 'templates/company&investor/company3.html'
+            templateUrl: 'templates/company&investor/company3.html',
+          cache: false
 
         })
         .state('investor1', {
             url: '/investor1',
-            templateUrl: 'templates/company&investor/investor1.html'
+            templateUrl: 'templates/company&investor/investor1.html',
+          cache: false
         })
         .state('investor2', {
             url: '/investor2',
-            templateUrl: 'templates/company&investor/investor2.html'
+            templateUrl: 'templates/company&investor/investor2.html',
+          cache: false
         })
         .state('investor3', {
             url: '/investor3',
-            templateUrl: 'templates/company&investor/investor3.html'
+            templateUrl: 'templates/company&investor/investor3.html',
+          cache: false
         })
         .state('UserMessages', {
             url: '/UserMessages',
             templateUrl: 'templates/UserMessages.html',
-            controller: 'UserMessagesCtrl'
+            controller: 'UserMessagesCtrl',
+          cache: false
         });
 
     $urlRouterProvider.otherwise('/welcome')
@@ -147,7 +162,7 @@ angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 
       console.log('UserMessages $ionicView.enter');
 
       getMessages();
-      
+
       $timeout(function() {
         footerBar = document.body.querySelector('#userMessagesView .bar-footer');
         scroller = document.body.querySelector('#userMessagesView .scroll-content');
@@ -204,7 +219,7 @@ angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 
       // you can't see the effect of this in the browser it needs to be used on a real device
       // for some reason the one time blur event is not firing in the browser but does on devices
       keepKeyboardOpen();
-      
+
       //MockService.sendMessage(message).then(function(data) {
       $scope.input.message = '';
 
@@ -229,7 +244,7 @@ angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 
 
       //});
     };
-    
+
     // this keeps the keyboard open on a device only after sending a message, it is non obtrusive
     function keepKeyboardOpen() {
       console.log('keepKeyboardOpen');
@@ -263,7 +278,7 @@ angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 
 
               break;
           }
-          
+
           return true;
         }
       });
@@ -277,22 +292,22 @@ angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 
         // go to other users profile
       }
     };
-    
+
     // I emit this event from the monospaced.elastic directive, read line 480
     $scope.$on('taResize', function(e, ta) {
       console.log('taResize');
       if (!ta) return;
-      
+
       var taHeight = ta[0].offsetHeight;
       console.log('taHeight: ' + taHeight);
-      
+
       if (!footerBar) return;
-      
+
       var newFooterHeight = taHeight + 10;
       newFooterHeight = (newFooterHeight > 44) ? newFooterHeight : 44;
-      
+
       footerBar.style.height = newFooterHeight + 'px';
-      scroller.style.bottom = newFooterHeight + 'px'; 
+      scroller.style.bottom = newFooterHeight + 'px';
     });
 
 }])
@@ -314,11 +329,11 @@ angular.module('starter', ['ionic', 'starter.welcomeCtrl', 'starter.loginCtrl', 
       });
       */
       var deferred = $q.defer();
-      
+
 		 setTimeout(function() {
       	deferred.resolve(getMockMessages());
 	    }, 1500);
-      
+
       return deferred.promise;
     };
 
